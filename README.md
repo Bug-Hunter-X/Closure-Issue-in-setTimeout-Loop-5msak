@@ -1,0 +1,3 @@
+# JavaScript Closure Issue in setTimeout Loop
+
+This repository demonstrates a common closure-related bug in JavaScript when using `setTimeout` within a loop.  The expected behavior is to log numbers 0-9 with a one-second delay between each.  However, due to the way closures work in JavaScript, the loop completes before the `setTimeout` callbacks execute, and they all end up logging the final value of `i` (which is 10).
